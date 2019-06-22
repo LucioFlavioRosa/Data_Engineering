@@ -58,7 +58,7 @@ Using the song and log datasets, I created a denormalized star schema optimized 
 
 ## ETL Pipeline
 
-Extract, transform, load (ETL) is the general procedure of copying data from one or more sources into a destination system which represents the data differently from the sources or in a different context than the sources.
+Extract, transform, load (ETL) is the general procedure of copying data from one or more sources into a destination system which represents the data differently from, or in a different context than, the sources.
 
 #### Extracting and Transforming the Data
 
@@ -69,7 +69,7 @@ The ETL pipeline extracts data from files in two directories:
 It then transforms and loads the data into the five tables of the sparkifydb database. This is handled by four files using Python and SQL:
 - Running `create_tables.py` creates and initializes the tables for the sparkifydb database.
 - Running `test.ipynb` confirms the creation of my tables with the correct columns.
-- Running `etl.ipynb` develops ETL processes for each table and is used to prepare a python script for processing the entire datasets.
+- Running `etl.ipynb` develops ETL processes for each table and is used to prepare a python script for processing all the datasets.
 - `sql_queries.py` contains all SQL queries and is imported into `create_tables.py` and `etl.ipynb`
 
 #### Loading the Data and Running ETL Pipeline
@@ -79,9 +79,9 @@ All the code I wrote in `etl.ipynb` I then used to complete `etl.py`, which read
 The steps to run the pipeline are as follows:
 
 1. In a terminal, run `python create_tables.py` to reset the tables in the sparkifydb database.
-2. Running `test.ipynb` (in a jupyter notebook) confirms the tables were successfully created with the correct columns.
-3. In a terminal, run `python etl.py` to process the entire datasets.
-4. Again, running `test.ipynb` confirms the records were successfully inserted into each table.
+2. Running `test.ipynb` (in a jupyter notebook) confirms that the tables were successfully created with the correct columns.
+3. In a terminal, run `python etl.py` to process all the datasets.
+4. Again, running `test.ipynb` confirms that the records were successfully inserted into each table.
 
 #### Sample Queries
 
