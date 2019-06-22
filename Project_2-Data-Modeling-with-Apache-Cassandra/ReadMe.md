@@ -29,6 +29,6 @@ In this project, I worked with one dataset: `event_data`: this directory of csv 
 
 Extract, transform, load (ETL) is the general procedure of copying data from one or more sources into a destination system which represents the data differently from the sources or in a different context than the sources.
 
-- Running `ETL-Pipeline.ipynb` first preprocesses the csv file, and then includes Apache Cassandra `CREATE` and `INSERT` statements to load processed records into relevant tables. The tables are tested by running `SELEC` statements.
+- Running `ETL-Pipeline.ipynb` first preprocesses the csv file, and then includes Apache Cassandra `CREATE` and `INSERT` statements to load processed records into relevant tables. The tables are tested by running `SELECT` statements.
 - `sql_queries.py` contains all SQL queries and is imported into `ETL-Pipeline.ipynb`.
-- `functions.py` contains the preprocessing function that creates new csv files to be used for Apache Cassandra tables.
+- `functions.py` contains the preprocessing function that creates new csv files to be used for Apache Cassandra tables and is imported into `ETL-Pipeline.ipynb`.
